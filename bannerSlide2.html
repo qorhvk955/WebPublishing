@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ScreenCloneProject.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="campusBox">        
+                <button id="campusBoxBtn" onclick="openNewPage('campusBox.html')">캠퍼스선택 ▼</button>
+            </div>
+            <div class="headerBox">  
+                <div class="mobileBtn">
+                    <button id="mobileBtn" onclick="openNewPage('mobileBtn.html')">
+                        <img src="img/mobileBtn.png" alt="Mobile Button">
+                    </button>
+                </div>
+                <div class="headerLogo">
+                    <img src="img/headerLogo.png" alt="HeaderLogo">                   
+                </div>         
+                <div class="mobileCall">
+                    <button id="mobileCall" onclick="alert('전화를 걸겠습니다!')">
+                        <img src="img/mobileCall.png" alt="Mobile Call">
+                    </button>
+                </div> 
+            </div> 
+        </div>
+        <div class="contents">
+   
+            <div class="bannerWrap">
+
+                <div class="bannerSlide">
+                <img src="img/bannerSlide2.png" alt="bannerSlide">
+                </div>
+                        <div class="clippingLeftArrow">
+                    <img src="img/clippingLeftArrow.png" onclick="openNewPage('bannerSlide1.html')" alt="clippingLeftArrow">
+                </div>
+                <div class="clippingRightArrow">
+                    <img src="img/clippingRightArrow.png" onclick="openNewPage('bannerSlide3.html')" alt="clippingRightArrow">
+                </div>
+            </div>    
+            <div class="blank"></div>
+            <div class="quickWrap">
+                <div class="quick">
+                    <div class="quickNotice" >
+                        <h3>NOTICE</h3>
+                    </div>
+                    <div class="quickTitle" >
+                        <span id="quickTitleSpan">[긴급속보] 배가 고픕니다.</span>
+                    </div>       
+                    <div class="quickArrow">
+                        <button id="quickUpArrow_btn">
+                            <img src="img/quickUpArrow_btn.png" onclick="changeBg('up')" alt="">
+                        </button>
+
+                        <button id="quickDownArrow_btn">
+                            <img src="img/quickDownArrow_btn.png" onclick="alert('down')" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+            <div class="quickMenu">
+                <div>
+                    <img src="img/사전예약.png" onclick="alert('사전예약페이지입니다.')">
+                    <span>사전예약</span>
+                </div>
+                <div>
+                    <img src="img/위치안내.png" onclick="alert('위치안내페이지.')">
+                    <span>위치안내</span>
+                </div>
+                <div>
+                    <img src="img/수강후기.png" onclick="alert('수강후기페이지.')">
+                    <span>수강후기</span>
+                </div>
+                <div>
+                    <img src="img/채용정보.png" onclick="alert('수강후기페이지.')">
+                    <span>채용정보</span>
+                </div>
+                <div>
+                    <img src="img/수강료조회.png" onclick="alert('수강료조회.')">
+                    <span>수강료조회</span>
+                </div>
+            </div>
+            <div class = "contentCourse">
+                <div class="contentTitile">
+                    <h2> 마감임박과정</h2>
+                    <span>&nbsp기다리지 말고 바로 들으세요.</span>                   
+                </div>        
+                <div class="search">
+                    <div>&nbsp</div>
+                    <div class="searchWrap">
+                        <input type="text" name="" id="searchInput" placeholder="원하는과정명을입력하세요">
+                            <button onclick="clearSearchText()">
+                                <img src="img/close.png" alt="">
+                            </button>  
+                        <div>
+                            <button id="search">
+                             <img src="img/돋보기.png" onclick="search()">
+                            </button>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+            <div class="blank"></div>
+            <div> 그림 </div>
+            <hr>
+            <div class="classaskWrap">
+                <div class="blank"></div>
+
+                <div class="classaskTitile">
+                    <h2> 빠른 수강료 조회</h2>
+                    <span>수강료를 빠르게 안내해드립니다.</span> 
+                </div>
+                <hr>
+                <div class="blank"></div>
+                <div class="classask">
+                    <form>
+                        <table>
+                            <tr>
+                                <td>지점선택</td>
+                                <td>
+                                    <select class="cmapusStyle">
+                                        <option value="1">||지점선택||</option>
+                                        <option value="2">종로</option>
+                                        <option value="3">역삼</option>
+                                        <option value="4">신촌</option>
+                                        <option value="5">노원</option>
+                                        <option value="6">인천부평</option>
+                                        <option value="7">인천구월</option>
+                                        <option value="8">인천청라</option>
+                                        <option value="9">부천</option>
+                                        <option value="10">안산</option>
+                                        <option value="11">안양</option>
+                                        <option value="12">수원</option>
+                                    </select>
+                                </td>                       
+                            </tr>
+                            <tr>
+                                <td>
+                                    희망분야
+                                </td>
+                                <td>
+                                    <div class="tableflex">
+                                        <div class="checkwrap">
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c1" value="웹디자인" >
+                                                <label for="c1"></label>
+                                                <span class="thischecked">웹디자인</span>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c2" value="SW개발">
+                                                <label for="c2"></label>
+                                                <span class="thischecked">SW개발</span>
+
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c3" value="세무회계OA">
+                                                <label for="c3"></label>
+                                                <span class="thischecked">세무회계OA</span>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c4" value="아트웍">
+                                                <label for="c4"></label>
+                                                <span class="thischecked">아트웍</span>
+                                            </div>
+                                        </div>
+                                        <div class="checkwrap">
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c5" value="편집디자인">
+                                                <label for="c5"></label>
+                                                <span class="thischecked">편집디자인</span>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c6" value="영상/게임/마야s">
+                                                <label for="c6"></label>
+                                                <span class="thischecked">영상/게임/마야</span>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name ="subname" id="c7" value="건축산업디자인">
+                                                <label for="c7"></label>
+                                                <span class="thischecked">건축산업디자인</span>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    이름
+                                </td>
+                                <td>
+                                    <div class="userName">
+                                        <input type="text" id="userName" name ="userName"  placeholder="이름을 입력하세요" >
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    연락처
+                                </td>
+                                <td>
+                                    <select class="tellSelect" name="tell_1" id="tell_1">
+                                        <option value="010">010</option>    
+                                        <option value="011">011</option>   
+                                        <option value="016">016</option>    
+                                        <option value="017">017</option>    
+                                        <option value="018">018</option>   
+                                        <option value="019">019</option> 
+                                    </select>
+                                    <span>-</span>                                
+                                    <input type="text" name="tell_2" id="tell_2" value maxlength="4" >
+                                    <span>-</span>                                
+                                    <input type="text" name="tell_3" id="tell_3" value maxlength="4" >
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="blank"></div>
+                        <div>
+                            <input type="checkbox" name ="personalInformation" id="personalInformation" >
+                            <label for="c1"></label>
+                            <span class="thischecked">개인정보 수집 이용을 동의합니다. </span>
+                        </div>    
+                        <button class = tuition onclick="tableValues()">
+                            <img src="img/button.png" alt="">
+                        </button>
+                        <div class="blank"></div>
+                    </form>
+                </div>
+          </div> 
+        </div>
+        <div class="footer">              
+            
+            <div class="footerWrap">
+                <div class="footerlogo">
+                    <img src="img/footerlogo.png" alt="">
+                </div>
+                <div class="footerCall" >
+                    <h4> 대표번호 : 1588-9780 </h4>
+                </div>
+                <hr>
+                <div class = "fmenu1">
+                    <ul>
+                        <li>블로그</li>
+                        <li>인스타그램</li>
+                        <li>유튜브</li>
+                        <li>페이스북</li>
+                        <li>네이버TV</li>
+                        <li>카카오TV</li>
+                        <li>그린메거진</li>
+                    </ul>
+                </div> 
+                <hr>
+                <div class = "fmenu1">
+                    <ul>
+                        <li>이용약관</li>
+                        <li>개인보호정책</li>
+                        <li>제휴제안</li>
+                        <li>사이트맵</li>
+                        <li>오류신고</li>
+                    </ul>
+                </div> 
+
+                <div class="finfo">
+                    <h4>COMPANY INFO</h4>
+                    <ul>
+                        <li>대표자:김상곤</li>
+                        <li>사업자등록번호:214-86-26812</li>
+                        <li>통신판매업신고:2023-서울서초-2056호</li>
+                        <li>주소:서울 강남구 테헤란로5길 24, 장연빌딩/3~7층</li>
+                        <li>[교습과정 및 비용]</li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script src="ScreenCloneProject.js"></script>
+</body>
+</html>

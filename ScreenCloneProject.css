@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;            
+}
+
+img{
+    width: auto;
+    height: auto;
+}
+
+button{
+    background: transparent; 
+    border: none; 
+    cursor: pointer;
+    display: flex;
+
+}
+
+/* ------------------------------------- */
+
+.container{
+    margin: 0 auto;
+    width: 639px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0.5, 0.5);
+
+}
+
+/* 헤더 -> campusBox */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;         
+    flex-wrap: wrap;
+    width: 100%;
+    height: 75px;
+    background-color: #ffffff;
+}
+
+ /* 캠퍼스 선택 */
+
+.campusBox{
+    width: 600px;
+    height: 20px;
+    background-color: #2196f3;     
+    border-radius:  0 0 10px 10px;  /*둥굴게*/
+    display: flex;
+    justify-content: center;
+    align-items: center;          
+}
+
+.campusBox > button{
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+/* 3개 요소 부모임 */
+.headerBox{
+    width: 600px; /*가로 길이 campusBox width */
+    height: 55px;      /* 75px(header)-20px(campusBox) = 55px */
+    background-color: #ffffff;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center /*수직정렬*/
+
+}
+/*---------------공통으로 쓰는 부분------------------------*/
+/* 이미지 - 가로 크기는 이미지 원본 높이는 부모로 부터 맞추게 */
+
+
+.contents{
+    width: 100%;
+    background-color: #ffffff;
+    padding-left: 20px;  
+    padding-right: 20px;      
+}
+
+.bannerWrap {    
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.clippingLeftArrow{
+    position: absolute; 
+    top: 40%; 
+    left: 0%;
+    cursor: pointer;
+}
+.clippingRightArrow{
+    position: absolute; 
+    top: 40%; 
+    right: 0%;
+    cursor: pointer;
+}
+
+
+
+.quick{
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;       
+    align-items: center; 
+
+    padding-left: 20px;   
+    padding-right: 20px;  
+
+    border: 1px solid #ccc;
+
+    border-radius:  20px 20px 20px 20px; 
+
+
+    background-color: #fff;
+
+
+
+    /*  왜 안 먹지 상단... */
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); */
+    
+}
+
+.quickNotice,
+.quickTitle {
+    display: flex;
+    align-items: center;
+}
+
+
+.quickArrow{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;  
+    align-items: center; 
+}
+.quickArrow > button{
+    height: 15px;
+}
+
+.quickNotice > h3{
+    color: #2196f3;
+}
+
+.blank{
+    height: 10px;
+}
+
+.quickMenu{
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-around;
+    align-items: center; 
+
+
+}
+
+
+
+.quickMenu>div{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quickMenu>:nth-child(1), .quickMenu>:nth-child(5){
+    color: #2196f3;
+}
+
+
+.quickMenu>:nth-child(2)>img:hover, 
+.quickMenu>:nth-child(3)>img:hover,
+.quickMenu>:nth-child(4)>img:hover
+{
+    background-color: #2196f3;
+    border-radius:  20px 20px 20px 20px;  /*둥굴게*/
+
+
+}
+
+
+
+/* qbqbbqb */
+
+.contentCourse{
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.contentTitile{
+    display: flex;
+    flex-direction: column;    
+}
+
+
+.contentTitile > span{
+    color: #bdbdbd;
+    font-size: small;
+    letter-spacing : -1px;
+    font-weight: 500;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+}
+
+.searchWrap{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius:  20px 20px 20px 20px;
+}
+
+#searchInput::placeholder{
+    color:  #bdbdbd;
+}
+
+.searchWrap>div>button{
+    display: flex;
+    align-items: center;
+}
+
+.searchWrap > input{
+    width: 180px;
+    text-decoration: none;
+    color: none;
+    background: transparent; /* 투명한 배경 */
+    border: none;
+    outline: none;
+    
+}
+
+.lastMinuteRegistration {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#left, #right{
+    cursor: pointer;
+} 
+
+
+.classask{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.tableflex{
+    display: flex;
+}
+
+td:first-child{
+    text-align: center;
+
+    background-color: #2d3381;
+    color: #fff;
+    width: 100px;
+    font-weight: 700;
+
+}
+
+
+
+td:last-child{
+    width: 300px;
+}
+
+select{
+    margin: 5px 15px;
+    height: 25px;
+
+
+}
+
+.checkwrap{
+    margin: 10px;
+    margin-left: 15px;
+}
+
+.checkwrap > div{
+    margin-top: 5px;
+}
+
+
+
+.userName > input{
+    margin: 5px 15px;
+    border: 1px solid #bdbdbd;
+    height: 25px;
+}    
+
+
+
+
+table{
+    width: 450px;
+    height: 300px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td,th{
+    border: 1px solid  #6e5fd1;
+
+} 
+
+#tell_1{
+    margin: 0;
+    margin-left: 15px;
+
+}
+
+
+#tell_2, #tell_3{
+    text-align: center;
+    margin: 5px 0;
+    width: 45px;
+    height: 25px;
+    border: 1px solid #bdbdbd;
+
+}
+
+
+.classaskTitile{
+    display: flex;
+    flex-direction: column; 
+}
+
+.classaskTitile > span{
+    margin-top: 5px;
+    color: #bdbdbd;
+    font-size: small;
+    letter-spacing : -1px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+select{
+    border-color: #bdbdbd;
+    
+
+}
+
+.classaskWrap{
+    padding : 0 10px;
+    background-color: #f2f2f2;
+}
+
+
+
+.classaskTitile>h2{
+    letter-spacing : -3px;
+    color: rgb(22, 22, 22);
+}
+
+hr{   
+    border: none;
+    height: 1px;
+    background-color: #bdbdbd; /* 색상을 여기에 지정하세요 */
+}
+
+#tuition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+.footer{
+    width: 100%;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerCall{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items : center; 
+    justify-content: center;
+
+}
+
+.footerWrap > *{
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.footerlogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.fmenu1 > ul {
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: repeat(3,25px);
+    grid-template-columns: repeat(3,200px);
+    place-items : center; 
+    font-weight: 700;
+    font-size: small;
+} 
+
+.fmenu1 > ul > li{
+    list-style: none;    
+} 
+
+.finfo > ul {
+    margin: 20px;
+}
+
+
+
+.finfo > ul > li{
+    font-size: 11px;
+    font-weight: 700;
+    list-style: none;    
+
+}
+
